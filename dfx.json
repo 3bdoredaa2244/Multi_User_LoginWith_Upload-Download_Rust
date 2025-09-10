@@ -5,7 +5,7 @@
       "build": "cargo build --target wasm32-unknown-unknown --release --manifest-path backend/Cargo.toml",
       "candid": "backend/backend.did",
       "wasm": "backend/target/wasm32-unknown-unknown/release/backend.wasm"
-},
+    },
     "frontend": {
       "dependencies": ["backend"],
       "frontend": { "entrypoint": "frontend/index.html" },

@@ -42,6 +42,7 @@ checksum = "c08606f8c3cbf4ce6ec8e28fb0014a2c086708fe954eaa885384a6165172e7e8"
 name = "backend"
 version = "0.1.0"
 dependencies = [
+ "candid 0.9.11",
  "ic-cdk",
  "ic-cdk-macros 0.7.1",
  "serde",
@@ -376,16 +377,23 @@ checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "ic-cdk"
-version = "0.7.4"
+version = "0.8.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9beb0bf1dcd0639c313630e34aa547a2b19450ddf1969c176e13225ef3b29048"
+checksum = "98be05efe1e281a29c8a8a131b8ad747fc91f96997c30df8639c5f4f2c81a55f"
 dependencies = [
  "candid 0.8.4",
+ "ic-cdk-executor",
  "ic-cdk-macros 0.6.10",
  "ic0",
  "serde",
  "serde_bytes",
 ]
+
+[[package]]
+name = "ic-cdk-executor"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "903057edd3d4ff4b3fe44a64eaee1ceb73f579ba29e3ded372b63d291d7c16c2"
 
 [[package]]
 name = "ic-cdk-macros"
@@ -1037,9 +1045,9 @@ checksum = "1dccffe3ce07af9386bfd29e80c0ab1a8205a2fc34e4bcd40364df902cfa8f3f"
 
 [[package]]
 name = "unicode-ident"
-version = "1.0.18"
+version = "1.0.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a5f39404a5da50712a4c1eecf25e90dd62b613502b7e925fd4e4d19b5c96512"
+checksum = "f63a545481291138910575129486daeaf8ac54aee4387fe7906919f7830c7d9d"
 
 [[package]]
 name = "unicode-width"

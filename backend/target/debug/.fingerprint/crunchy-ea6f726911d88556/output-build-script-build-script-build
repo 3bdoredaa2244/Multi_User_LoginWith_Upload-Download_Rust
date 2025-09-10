@@ -1,29 +1,5 @@
-Error: The paging file is too small for this operation to complete. (os error 1455)
-thread 'main' has overflowed its stack
-
-
-Stack backtrace:
-   0: <unknown>
-   1: std::backtrace::Backtrace::capture
-             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\backtrace.rs:296
-   2: anyhow::error::<impl core::convert::From<E> for anyhow::Error>::from
-   3: <salsa::interned::JarImpl<C> as salsa::ingredient::Jar>::create_ingredients
-   4: std::sys::backtrace::__rust_begin_short_backtrace
-   5: std::rt::lang_start::{{closure}}
-   6: std::rt::lang_start_internal::closure$0
-             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\rt.rs:175
-   7: std::panicking::catch_unwind::do_call
-             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\panicking.rs:589
-   8: std::panicking::catch_unwind
-             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\panicking.rs:552
-   9: std::panic::catch_unwind
-             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\panic.rs:359
-  10: std::rt::lang_start_internal
-             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\rt.rs:171
-  11: main
-  12: invoke_main
-             at D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
-  13: __scrt_common_main_seh
-             at D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
-  14: BaseThreadInitThunk
-  15: RtlUserThreadStart
+{"$message_type":"diagnostic","message":"linker `link.exe` not found","code":null,"level":"error","spans":[],"children":[{"message":"program not found","code":null,"level":"note","spans":[],"children":[],"rendered":null}],"rendered":"\u001b[0m\u001b[1m\u001b[38;5;9merror\u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15m: linker `link.exe` not found\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m= \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15mnote\u001b[0m\u001b[0m: program not found\u001b[0m\n\n"}
+{"$message_type":"diagnostic","message":"the msvc targets depend on the msvc linker but `link.exe` was not found","code":null,"level":"note","spans":[],"children":[],"rendered":"\u001b[0m\u001b[1m\u001b[38;5;10mnote\u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15m: the msvc targets depend on the msvc linker but `link.exe` was not found\u001b[0m\n\n"}
+{"$message_type":"diagnostic","message":"please ensure that Visual Studio 2017 or later, or Build Tools for Visual Studio were installed with the Visual C++ option.","code":null,"level":"note","spans":[],"children":[],"rendered":"\u001b[0m\u001b[1m\u001b[38;5;10mnote\u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15m: please ensure that Visual Studio 2017 or later, or Build Tools for Visual Studio were installed with the Visual C++ option.\u001b[0m\n\n"}
+{"$message_type":"diagnostic","message":"VS Code is a different product, and is not sufficient.","code":null,"level":"note","spans":[],"children":[],"rendered":"\u001b[0m\u001b[1m\u001b[38;5;10mnote\u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15m: VS Code is a different product, and is not sufficient.\u001b[0m\n\n"}
+{"$message_type":"diagnostic","message":"aborting due to 1 previous error","code":null,"level":"error","spans":[],"children":[],"rendered":"\u001b[0m\u001b[1m\u001b[38;5;9merror\u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15m: aborting due to 1 previous error\u001b[0m\n\n"}

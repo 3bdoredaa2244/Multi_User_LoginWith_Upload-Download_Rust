@@ -174,7 +174,7 @@ function App() {
   return (
     <div className="container mx-auto p-4">
       <div className="flex flex-row justify-between">
-        <h1 className="mb-4 text-2xl font-bold">FileVault</h1>
+        <h1 className="mb-4 text-2xl font-bold">AbdulRahman Reda</h1>
 
         {isAuthenticated ? (
           <button onClick={logout} className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">

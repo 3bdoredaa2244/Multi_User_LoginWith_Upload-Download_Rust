@@ -1,0 +1,14 @@
+type FileMeta = record {
+  file_type: text;
+  size: nat64;
+};
+
+service : {
+  check_file_exists: (text) -> (bool) query;
+  delete_file: (text) -> (bool);
+  get_file_chunk: (text, nat64) -> (opt vec nat8) query;
+  get_file_type: (text) -> (opt text) query;
+  get_files: () -> (vec record { text; text; nat64 }) query;
+  get_total_chunks: (text) -> (nat64) query;
+  upload_file_chunk: (text, vec nat8, nat64, text) -> ();
+}
