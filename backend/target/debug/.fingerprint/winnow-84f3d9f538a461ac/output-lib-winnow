@@ -1,0 +1,40 @@
+
+thread 'rustc' panicked at /rust/deps\elsa-1.11.0\src\sync.rs:774:17:
+assertion failed: !ptr.is_null()
+stack backtrace:
+   0: std::panicking::begin_panic_handler
+             at /rustc/05f9846f893b09a1be1fc8560e33fc3c815cfecb/library\std\src\panicking.rs:695
+   1: core::panicking::panic_fmt
+             at /rustc/05f9846f893b09a1be1fc8560e33fc3c815cfecb/library\core\src\panicking.rs:75
+   2: core::panicking::panic
+             at /rustc/05f9846f893b09a1be1fc8560e33fc3c815cfecb/library\core\src\panicking.rs:145
+   3: <rustc_resolve::check_unused::UnusedImportCheckVisitor as rustc_ast::visit::Visitor>::visit_use_tree
+   4: <rustc_resolve::def_collector::DefCollector as rustc_ast::visit::Visitor>::visit_generic_param
+   5: <hashbrown::raw::RawTable<usize>>::reserve_rehash::<indexmap::map::core::get_hash<rustc_resolve::BindingKey, &core::cell::RefCell<rustc_resolve::imports::NameResolution>>::{closure#0}>
+   6: <rustc_resolve::def_collector::DefCollector as rustc_ast::visit::Visitor>::visit_item
+   7: <rustc_resolve::Resolver as rustc_expand::base::ResolverExpand>::visit_ast_fragment_with_placeholders
+   8: <rustc_expand::expand::MacroExpander>::fully_expand_fragment
+   9: <rustc_expand::expand::MacroExpander>::fully_expand_fragment
+  10: <rustc_expand::expand::MacroExpander>::expand_crate
+  11: rustc_interface::proc_macro_decls::proc_macro_decls_static
+  12: rustc_interface::passes::resolver_for_lowering_raw
+  13: <alloc::sync::Arc<rustc_session::cstore::CrateSource>>::drop_slow
+  14: <alloc::sync::Arc<rustc_session::cstore::CrateSource>>::drop_slow
+  15: RINvNtNtCs1bonBNpMvFl_18rustc_query_system5query8plumbing17try_execute_queryINtCs5uFTMav0Vyp_16rustc_query_impl13DynamicConfigINtNtB4_6caches11SingleCacheINtNtNtCs2vqUEYxsi4E_12rustc_middle5query5erase6ErasedAhj10_EEKb0_KB3t_KB3t_ENtNtB1f_8plumbing9QueryCt
+  16: rustc_query_impl::query_system
+  17: <rustc_middle::ty::context::TyCtxt>::resolver_for_lowering
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+error: the compiler unexpectedly panicked. this is a bug.
+
+note: we would appreciate a bug report: https://github.com/rust-lang/rust/issues/new?labels=C-bug%2C+I-ICE%2C+T-compiler&template=ice.md
+
+note: rustc 1.86.0 (05f9846f8 2025-03-31) running on x86_64-pc-windows-msvc
+
+note: compiler flags: --crate-type lib -C embed-bitcode=no
+
+note: some of the compiler flags provided by cargo are hidden
+
+query stack during panic:
+#0 [resolver_for_lowering_raw] getting the resolver for lowering
+end of query stack

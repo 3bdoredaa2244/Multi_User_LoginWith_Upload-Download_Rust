@@ -1,0 +1,29 @@
+Error: The paging file is too small for this operation to complete. (os error 1455)
+thread 'main' has overflowed its stack
+
+
+Stack backtrace:
+   0: <unknown>
+   1: std::backtrace::Backtrace::capture
+             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\backtrace.rs:296
+   2: anyhow::error::<impl core::convert::From<E> for anyhow::Error>::from
+   3: <salsa::interned::JarImpl<C> as salsa::ingredient::Jar>::create_ingredients
+   4: std::sys::backtrace::__rust_begin_short_backtrace
+   5: std::rt::lang_start::{{closure}}
+   6: std::rt::lang_start_internal::closure$0
+             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\rt.rs:175
+   7: std::panicking::catch_unwind::do_call
+             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\panicking.rs:589
+   8: std::panicking::catch_unwind
+             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\panicking.rs:552
+   9: std::panic::catch_unwind
+             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\panic.rs:359
+  10: std::rt::lang_start_internal
+             at /rustc/29483883eed69d5fb4db01964cdf2af4d86e9cb2/library\std\src\rt.rs:171
+  11: main
+  12: invoke_main
+             at D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+  13: __scrt_common_main_seh
+             at D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+  14: BaseThreadInitThunk
+  15: RtlUserThreadStart
